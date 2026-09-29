@@ -1,0 +1,46 @@
+[
+  {
+    "id": "paris",
+    "nom": "Paris",
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "version": 1,
+    "fichiers": {
+      "graphe_routage.bin": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/graphe_routage.bin",
+        "taille": 50392996,
+        "sha256": "2784b62278dbbd85e5b6aae923df3b13ed62bac0da0aff2402fc02b11847af1a"
+      },
+      "parcs_ombrages.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/parcs_ombrages.json",
+        "taille": 772432,
+        "sha256": "308e07b496c787aaa620f4b09f803c90f3d9225a37a6fb34615ad65135264a00"
+      },
+      "fontaines.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/fontaines.json",
+        "taille": 289193,
+        "sha256": "9c3fba6ea74f2a9505cb0124f31081548354eab7bb6a1f83de5e928d65055f09"
+      },
+      "restaurants.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/restaurants.json",
+        "taille": 1939568,
+        "sha256": "e0060e204725cb6c6eaa1a1e3cfdef4b712cc1696aa526cfce17c3e3d3f87798"
+      },
+      "parking.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/parking.json",
+        "taille": 2343110,
+        "sha256": "eafc83c6cf960de3f3f3c0f34247c212a6ea86c703ae5cfd95fa474bca19055f"
+      },
+      "pharmacies.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/pharmacies.json",
+        "taille": 250745,
+        "sha256": "0c727bf879c3b6309cd57ff5dec0f841ad8572c81f4e1e3e1971dfddcba0c400"
+      },
+      "distributeurs.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/distributeurs.json",
+        "taille": 116990,
+        "sha256": "330642edde5d1bbf1e0ee1db1750bf636247771564bc730ed7b87b8ffbc38cc6"
+      }
+    }
+  }
+]
