@@ -44,10 +44,10 @@
       "date.txt": {
         "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/date.txt",
         "taille": 18,
-        "sha256": "60daef5845a337a0547427256e2c0bee483d802dc2825aeffe80678447975228"
+        "sha256": "12b49f9e38a12b2735353539b2effc674a8e46532a8be9854d34f6a479beb460"
       }
     },
-    "date": "01/10/2026 20:00"
+    "date": "01/10/2026 23:00"
   },
   {
     "id": "grenoble-secteur-4",
