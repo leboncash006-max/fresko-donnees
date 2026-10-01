@@ -40,7 +40,13 @@
         "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/distributeurs.json",
         "taille": 116990,
         "sha256": "330642edde5d1bbf1e0ee1db1750bf636247771564bc730ed7b87b8ffbc38cc6"
+      },
+      "date.txt": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/date.txt",
+        "taille": 18,
+        "sha256": "e247404ed59b2d40a91540062bc48b21d03651480baac945e18f5c4d7f07120c"
       }
-    }
+    },
+    "date": "01/10/2026 19:00"
   }
 ]
