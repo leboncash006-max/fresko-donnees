@@ -48,5 +48,55 @@
       }
     },
     "date": "01/10/2026 20:00"
+  },
+  {
+    "id": "grenoble-secteur-4",
+    "nom": "Grenoble - Secteur 4",
+    "lat": 45.171819,
+    "lon": 5.724003,
+    "version": 1,
+    "date": "01/10/2026 21:00",
+    "fichiers": {
+      "date.txt": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/date.txt",
+        "taille": 18,
+        "sha256": "d25ae968f2c74d5bfd0a339c821c3f1c80db314d21eac98a676e75d40483eee5"
+      },
+      "distributeurs.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/distributeurs.json",
+        "taille": 1221,
+        "sha256": "252739c0921a40f1eadf33515196e664acbff5f8365c61f3bab03d1fcee6037c"
+      },
+      "fontaines.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/fontaines.json",
+        "taille": 9208,
+        "sha256": "cdc9e578df79d94f2be3bce2bc01ecd4268e2f784808cb32ff55b755ac684ef4"
+      },
+      "graphe_routage.bin": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/graphe_routage.bin",
+        "taille": 459712,
+        "sha256": "f8793917643d6308c830880e136de5240f722f06092641fd755d80748769e554"
+      },
+      "parcs_ombrages.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/parcs_ombrages.json",
+        "taille": 10340,
+        "sha256": "e343936bf3afac652255f5dd5cc812baf61ed08036d214805ccc902edb78b72c"
+      },
+      "parking.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/parking.json",
+        "taille": 40275,
+        "sha256": "9bc7a2c0cf33830d6623dafafe68a61e0f86a2969e08dd38ce7242b190aa24e5"
+      },
+      "pharmacies.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/pharmacies.json",
+        "taille": 2050,
+        "sha256": "b4602e8ee09399958d9768ba166d307847827422d76c9bba863a3bc769d26f4b"
+      },
+      "restaurants.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/restaurants.json",
+        "taille": 13381,
+        "sha256": "a80d964b10bf7138fa00e97ea6eece6ef065df692e42aa4f5cf434f93b7e5bee"
+      }
+    }
   }
 ]
