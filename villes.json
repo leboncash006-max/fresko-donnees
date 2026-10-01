@@ -700,12 +700,12 @@
     "lat": 45.171819,
     "lon": 5.724003,
     "version": 1,
-    "date": "01/10/2026 21:00",
+    "date": "01/10/2026 23:00",
     "fichiers": {
       "date.txt": {
         "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/date.txt",
         "taille": 18,
-        "sha256": "d25ae968f2c74d5bfd0a339c821c3f1c80db314d21eac98a676e75d40483eee5"
+        "sha256": "12b49f9e38a12b2735353539b2effc674a8e46532a8be9854d34f6a479beb460"
       },
       "distributeurs.json": {
         "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/distributeurs.json",
