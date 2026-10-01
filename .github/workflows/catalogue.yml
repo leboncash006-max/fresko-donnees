@@ -1,0 +1,37 @@
+# Termine tout seul une publication commencée (voir .github/reconcilier.py) :
+# une release publiée dont le catalogue n'a pas la version y est inscrite.
+name: Catalogue
+on:
+  release:
+    types: [published]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: catalogue
+  cancel-in-progress: false
+jobs:
+  catalogue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Laisser le kit finir sa publication
+        if: github.event_name == 'release'
+        run: sleep 240
+      - name: Mettre le catalogue à jour
+        run: |
+          git pull --ff-only
+          python3 .github/reconcilier.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEPOT: ${{ github.repository }}
+      - name: Enregistrer
+        run: |
+          git diff --quiet villes.json && exit 0
+          git config user.name "fresko-catalogue"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add villes.json
+          git commit -m "Catalogue : publication terminée automatiquement"
+          git push

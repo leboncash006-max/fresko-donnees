@@ -1,53 +1,582 @@
 [
   {
+    "id": "grenoble-secteur-4",
+    "nom": "Grenoble - Secteur 4",
+    "lat": 45.171819,
+    "lon": 5.724003,
+    "version": 1,
+    "date": "01/10/2026 23:00",
+    "fichiers": {
+      "date.txt": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/date.txt",
+        "taille": 18,
+        "sha256": "12b49f9e38a12b2735353539b2effc674a8e46532a8be9854d34f6a479beb460"
+      },
+      "distributeurs.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/distributeurs.json",
+        "taille": 1221,
+        "sha256": "252739c0921a40f1eadf33515196e664acbff5f8365c61f3bab03d1fcee6037c"
+      },
+      "fontaines.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/fontaines.json",
+        "taille": 9208,
+        "sha256": "cdc9e578df79d94f2be3bce2bc01ecd4268e2f784808cb32ff55b755ac684ef4"
+      },
+      "graphe_routage.bin": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/graphe_routage.bin",
+        "taille": 459712,
+        "sha256": "f8793917643d6308c830880e136de5240f722f06092641fd755d80748769e554"
+      },
+      "parcs_ombrages.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/parcs_ombrages.json",
+        "taille": 10340,
+        "sha256": "e343936bf3afac652255f5dd5cc812baf61ed08036d214805ccc902edb78b72c"
+      },
+      "parking.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/parking.json",
+        "taille": 40275,
+        "sha256": "9bc7a2c0cf33830d6623dafafe68a61e0f86a2969e08dd38ce7242b190aa24e5"
+      },
+      "pharmacies.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/pharmacies.json",
+        "taille": 2050,
+        "sha256": "b4602e8ee09399958d9768ba166d307847827422d76c9bba863a3bc769d26f4b"
+      },
+      "restaurants.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/restaurants.json",
+        "taille": 13381,
+        "sha256": "a80d964b10bf7138fa00e97ea6eece6ef065df692e42aa4f5cf434f93b7e5bee"
+      }
+    },
+    "description": "Le secteur 4 de Grenoble, au sud du centre-ville : l'ombre rue par rue pour marcher au frais.",
+    "communes": [
+      "Grenoble"
+    ],
+    "contour": [
+      [
+        [
+          45.16454,
+          5.71231
+        ],
+        [
+          45.16682,
+          5.71293
+        ],
+        [
+          45.16835,
+          5.71371
+        ],
+        [
+          45.16863,
+          5.71397
+        ],
+        [
+          45.16876,
+          5.71423
+        ],
+        [
+          45.16881,
+          5.7146
+        ],
+        [
+          45.16876,
+          5.71488
+        ],
+        [
+          45.16818,
+          5.71581
+        ],
+        [
+          45.16789,
+          5.71608
+        ],
+        [
+          45.16741,
+          5.71623
+        ],
+        [
+          45.16711,
+          5.7162
+        ],
+        [
+          45.16675,
+          5.71602
+        ],
+        [
+          45.16553,
+          5.7148
+        ],
+        [
+          45.16356,
+          5.71458
+        ],
+        [
+          45.16346,
+          5.71474
+        ],
+        [
+          45.16339,
+          5.71498
+        ],
+        [
+          45.16366,
+          5.71601
+        ],
+        [
+          45.16471,
+          5.71689
+        ],
+        [
+          45.16528,
+          5.71725
+        ],
+        [
+          45.16596,
+          5.71801
+        ],
+        [
+          45.1667,
+          5.71866
+        ],
+        [
+          45.16731,
+          5.71865
+        ],
+        [
+          45.1675,
+          5.71828
+        ],
+        [
+          45.16865,
+          5.71702
+        ],
+        [
+          45.16944,
+          5.71509
+        ],
+        [
+          45.1699,
+          5.71473
+        ],
+        [
+          45.17039,
+          5.71463
+        ],
+        [
+          45.1715,
+          5.71504
+        ],
+        [
+          45.17176,
+          5.71534
+        ],
+        [
+          45.17203,
+          5.71592
+        ],
+        [
+          45.17331,
+          5.71569
+        ],
+        [
+          45.1736,
+          5.7157
+        ],
+        [
+          45.17563,
+          5.71656
+        ],
+        [
+          45.17606,
+          5.71654
+        ],
+        [
+          45.17751,
+          5.7169
+        ],
+        [
+          45.17862,
+          5.71731
+        ],
+        [
+          45.18047,
+          5.71819
+        ],
+        [
+          45.18113,
+          5.71883
+        ],
+        [
+          45.1814,
+          5.71971
+        ],
+        [
+          45.18182,
+          5.72272
+        ],
+        [
+          45.18179,
+          5.7234
+        ],
+        [
+          45.18252,
+          5.72621
+        ],
+        [
+          45.18334,
+          5.72798
+        ],
+        [
+          45.18403,
+          5.73002
+        ],
+        [
+          45.18468,
+          5.73076
+        ],
+        [
+          45.18558,
+          5.73099
+        ],
+        [
+          45.18592,
+          5.73118
+        ],
+        [
+          45.18616,
+          5.73148
+        ],
+        [
+          45.18638,
+          5.73213
+        ],
+        [
+          45.18634,
+          5.7326
+        ],
+        [
+          45.18615,
+          5.73293
+        ],
+        [
+          45.18526,
+          5.73368
+        ],
+        [
+          45.18414,
+          5.73478
+        ],
+        [
+          45.18388,
+          5.73532
+        ],
+        [
+          45.18393,
+          5.73668
+        ],
+        [
+          45.1855,
+          5.74067
+        ],
+        [
+          45.18544,
+          5.74125
+        ],
+        [
+          45.18507,
+          5.7417
+        ],
+        [
+          45.18453,
+          5.7419
+        ],
+        [
+          45.1835,
+          5.7421
+        ],
+        [
+          45.18162,
+          5.74213
+        ],
+        [
+          45.1802,
+          5.74297
+        ],
+        [
+          45.17956,
+          5.74313
+        ],
+        [
+          45.17927,
+          5.74306
+        ],
+        [
+          45.17893,
+          5.74285
+        ],
+        [
+          45.17871,
+          5.74252
+        ],
+        [
+          45.17862,
+          5.74219
+        ],
+        [
+          45.17781,
+          5.74155
+        ],
+        [
+          45.17668,
+          5.74157
+        ],
+        [
+          45.17637,
+          5.74151
+        ],
+        [
+          45.17516,
+          5.74064
+        ],
+        [
+          45.17357,
+          5.74108
+        ],
+        [
+          45.1732,
+          5.74103
+        ],
+        [
+          45.17287,
+          5.74084
+        ],
+        [
+          45.17254,
+          5.74031
+        ],
+        [
+          45.17225,
+          5.7383
+        ],
+        [
+          45.17238,
+          5.73793
+        ],
+        [
+          45.17258,
+          5.73771
+        ],
+        [
+          45.17337,
+          5.73736
+        ],
+        [
+          45.17332,
+          5.73699
+        ],
+        [
+          45.17301,
+          5.73692
+        ],
+        [
+          45.17251,
+          5.73665
+        ],
+        [
+          45.17217,
+          5.73616
+        ],
+        [
+          45.17202,
+          5.73489
+        ],
+        [
+          45.17219,
+          5.73297
+        ],
+        [
+          45.17176,
+          5.73288
+        ],
+        [
+          45.16916,
+          5.73298
+        ],
+        [
+          45.16888,
+          5.73288
+        ],
+        [
+          45.16836,
+          5.73251
+        ],
+        [
+          45.16804,
+          5.73201
+        ],
+        [
+          45.16807,
+          5.73142
+        ],
+        [
+          45.16914,
+          5.72851
+        ],
+        [
+          45.16894,
+          5.72734
+        ],
+        [
+          45.16507,
+          5.72299
+        ],
+        [
+          45.16403,
+          5.72224
+        ],
+        [
+          45.16068,
+          5.72156
+        ],
+        [
+          45.15934,
+          5.72099
+        ],
+        [
+          45.15844,
+          5.7204
+        ],
+        [
+          45.15824,
+          5.72018
+        ],
+        [
+          45.15807,
+          5.71961
+        ],
+        [
+          45.1582,
+          5.7185
+        ],
+        [
+          45.15831,
+          5.71822
+        ],
+        [
+          45.15864,
+          5.71787
+        ],
+        [
+          45.16003,
+          5.71714
+        ],
+        [
+          45.16057,
+          5.71587
+        ],
+        [
+          45.16057,
+          5.71546
+        ],
+        [
+          45.15851,
+          5.71461
+        ],
+        [
+          45.1582,
+          5.71436
+        ],
+        [
+          45.15804,
+          5.71412
+        ],
+        [
+          45.15789,
+          5.71351
+        ],
+        [
+          45.15792,
+          5.71314
+        ],
+        [
+          45.15873,
+          5.71171
+        ],
+        [
+          45.15901,
+          5.71145
+        ],
+        [
+          45.15936,
+          5.71132
+        ],
+        [
+          45.16147,
+          5.71125
+        ],
+        [
+          45.16269,
+          5.71144
+        ],
+        [
+          45.16394,
+          5.71181
+        ],
+        [
+          45.16428,
+          5.71199
+        ],
+        [
+          45.16454,
+          5.71231
+        ]
+      ]
+    ]
+  },
+  {
     "id": "paris",
     "nom": "Paris",
     "lat": 48.8566,
     "lon": 2.3522,
-    "version": 1,
+    "version": 2,
+    "date": "01/10/2026 23:00",
     "fichiers": {
-      "graphe_routage.bin": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/graphe_routage.bin",
-        "taille": 50392996,
-        "sha256": "2784b62278dbbd85e5b6aae923df3b13ed62bac0da0aff2402fc02b11847af1a"
-      },
-      "parcs_ombrages.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/parcs_ombrages.json",
-        "taille": 772432,
-        "sha256": "308e07b496c787aaa620f4b09f803c90f3d9225a37a6fb34615ad65135264a00"
+      "distributeurs.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v2/distributeurs.json",
+        "taille": 116999,
+        "sha256": "de0343ea10d61d4d220e8ab5e33e98487430782f73ac39d74ee18f5c72f802b0"
       },
       "fontaines.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/fontaines.json",
-        "taille": 289193,
-        "sha256": "9c3fba6ea74f2a9505cb0124f31081548354eab7bb6a1f83de5e928d65055f09"
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v2/fontaines.json",
+        "taille": 294435,
+        "sha256": "e728fa7f653ba00fa340c6496d340d25014fce78c779759f8630894f454da698"
       },
-      "restaurants.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/restaurants.json",
-        "taille": 1939568,
-        "sha256": "e0060e204725cb6c6eaa1a1e3cfdef4b712cc1696aa526cfce17c3e3d3f87798"
+      "graphe_routage.bin": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v2/graphe_routage.bin",
+        "taille": 51349072,
+        "sha256": "d64fd1487378f85982b386a9e604fb1ef2aafcf60a5a731788b26006d9f4247e"
+      },
+      "parcs_ombrages.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v2/parcs_ombrages.json",
+        "taille": 773037,
+        "sha256": "4f04f7f66f25719f5e0b2c281d9f01c4f23d53ede69172bfc14416fa2b97dba3"
       },
       "parking.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/parking.json",
-        "taille": 2343110,
-        "sha256": "eafc83c6cf960de3f3f3c0f34247c212a6ea86c703ae5cfd95fa474bca19055f"
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v2/parking.json",
+        "taille": 2345505,
+        "sha256": "ef98adc8d75d99ab1fcf75c2d0f18bc6b1924121cd8dfbbfa875a3ba2bf37f66"
       },
       "pharmacies.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/pharmacies.json",
-        "taille": 250745,
-        "sha256": "0c727bf879c3b6309cd57ff5dec0f841ad8572c81f4e1e3e1971dfddcba0c400"
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v2/pharmacies.json",
+        "taille": 250658,
+        "sha256": "152275ed74d84761433f56bd0bc3a4541ef5216d515cfe93e8fb29000447919f"
       },
-      "distributeurs.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/distributeurs.json",
-        "taille": 116990,
-        "sha256": "330642edde5d1bbf1e0ee1db1750bf636247771564bc730ed7b87b8ffbc38cc6"
-      },
-      "date.txt": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/date.txt",
-        "taille": 18,
-        "sha256": "12b49f9e38a12b2735353539b2effc674a8e46532a8be9854d34f6a479beb460"
+      "restaurants.json": {
+        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v2/restaurants.json",
+        "taille": 1940949,
+        "sha256": "5a1ba7defd53da4674c40fd84090428ec8a93ac326a3427ee8372fa901d1a962"
       }
     },
-    "date": "01/10/2026 23:00",
     "description": "Paris et la Grande couronne : l'ombre des immeubles et des arbres rue par rue, pour traverser la ville au frais même en plein été.",
     "communes": [
       "Paris",
@@ -692,540 +1221,52 @@
           2.16206
         ]
       ]
-    ]
-  },
-  {
-    "id": "grenoble-secteur-4",
-    "nom": "Grenoble - Secteur 4",
-    "lat": 45.171819,
-    "lon": 5.724003,
-    "version": 1,
-    "date": "01/10/2026 23:00",
-    "fichiers": {
-      "date.txt": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/date.txt",
-        "taille": 18,
-        "sha256": "12b49f9e38a12b2735353539b2effc674a8e46532a8be9854d34f6a479beb460"
-      },
-      "distributeurs.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/distributeurs.json",
-        "taille": 1221,
-        "sha256": "252739c0921a40f1eadf33515196e664acbff5f8365c61f3bab03d1fcee6037c"
-      },
-      "fontaines.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/fontaines.json",
-        "taille": 9208,
-        "sha256": "cdc9e578df79d94f2be3bce2bc01ecd4268e2f784808cb32ff55b755ac684ef4"
-      },
-      "graphe_routage.bin": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/graphe_routage.bin",
-        "taille": 459712,
-        "sha256": "f8793917643d6308c830880e136de5240f722f06092641fd755d80748769e554"
-      },
-      "parcs_ombrages.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/parcs_ombrages.json",
-        "taille": 10340,
-        "sha256": "e343936bf3afac652255f5dd5cc812baf61ed08036d214805ccc902edb78b72c"
-      },
-      "parking.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/parking.json",
-        "taille": 40275,
-        "sha256": "9bc7a2c0cf33830d6623dafafe68a61e0f86a2969e08dd38ce7242b190aa24e5"
-      },
-      "pharmacies.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/pharmacies.json",
-        "taille": 2050,
-        "sha256": "b4602e8ee09399958d9768ba166d307847827422d76c9bba863a3bc769d26f4b"
-      },
-      "restaurants.json": {
-        "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/grenoble-secteur-4-v1/restaurants.json",
-        "taille": 13381,
-        "sha256": "a80d964b10bf7138fa00e97ea6eece6ef065df692e42aa4f5cf434f93b7e5bee"
-      }
-    },
-    "description": "Le secteur 4 de Grenoble, au sud du centre-ville : l'ombre rue par rue pour marcher au frais.",
-    "communes": [
-      "Grenoble"
     ],
-    "contour": [
-      [
-        [
-          45.16454,
-          5.71231
-        ],
-        [
-          45.16682,
-          5.71293
-        ],
-        [
-          45.16835,
-          5.71371
-        ],
-        [
-          45.16863,
-          5.71397
-        ],
-        [
-          45.16876,
-          5.71423
-        ],
-        [
-          45.16881,
-          5.7146
-        ],
-        [
-          45.16876,
-          5.71488
-        ],
-        [
-          45.16818,
-          5.71581
-        ],
-        [
-          45.16789,
-          5.71608
-        ],
-        [
-          45.16741,
-          5.71623
-        ],
-        [
-          45.16711,
-          5.7162
-        ],
-        [
-          45.16675,
-          5.71602
-        ],
-        [
-          45.16553,
-          5.7148
-        ],
-        [
-          45.16356,
-          5.71458
-        ],
-        [
-          45.16346,
-          5.71474
-        ],
-        [
-          45.16339,
-          5.71498
-        ],
-        [
-          45.16366,
-          5.71601
-        ],
-        [
-          45.16471,
-          5.71689
-        ],
-        [
-          45.16528,
-          5.71725
-        ],
-        [
-          45.16596,
-          5.71801
-        ],
-        [
-          45.1667,
-          5.71866
-        ],
-        [
-          45.16731,
-          5.71865
-        ],
-        [
-          45.1675,
-          5.71828
-        ],
-        [
-          45.16865,
-          5.71702
-        ],
-        [
-          45.16944,
-          5.71509
-        ],
-        [
-          45.1699,
-          5.71473
-        ],
-        [
-          45.17039,
-          5.71463
-        ],
-        [
-          45.1715,
-          5.71504
-        ],
-        [
-          45.17176,
-          5.71534
-        ],
-        [
-          45.17203,
-          5.71592
-        ],
-        [
-          45.17331,
-          5.71569
-        ],
-        [
-          45.1736,
-          5.7157
-        ],
-        [
-          45.17563,
-          5.71656
-        ],
-        [
-          45.17606,
-          5.71654
-        ],
-        [
-          45.17751,
-          5.7169
-        ],
-        [
-          45.17862,
-          5.71731
-        ],
-        [
-          45.18047,
-          5.71819
-        ],
-        [
-          45.18113,
-          5.71883
-        ],
-        [
-          45.1814,
-          5.71971
-        ],
-        [
-          45.18182,
-          5.72272
-        ],
-        [
-          45.18179,
-          5.7234
-        ],
-        [
-          45.18252,
-          5.72621
-        ],
-        [
-          45.18334,
-          5.72798
-        ],
-        [
-          45.18403,
-          5.73002
-        ],
-        [
-          45.18468,
-          5.73076
-        ],
-        [
-          45.18558,
-          5.73099
-        ],
-        [
-          45.18592,
-          5.73118
-        ],
-        [
-          45.18616,
-          5.73148
-        ],
-        [
-          45.18638,
-          5.73213
-        ],
-        [
-          45.18634,
-          5.7326
-        ],
-        [
-          45.18615,
-          5.73293
-        ],
-        [
-          45.18526,
-          5.73368
-        ],
-        [
-          45.18414,
-          5.73478
-        ],
-        [
-          45.18388,
-          5.73532
-        ],
-        [
-          45.18393,
-          5.73668
-        ],
-        [
-          45.1855,
-          5.74067
-        ],
-        [
-          45.18544,
-          5.74125
-        ],
-        [
-          45.18507,
-          5.7417
-        ],
-        [
-          45.18453,
-          5.7419
-        ],
-        [
-          45.1835,
-          5.7421
-        ],
-        [
-          45.18162,
-          5.74213
-        ],
-        [
-          45.1802,
-          5.74297
-        ],
-        [
-          45.17956,
-          5.74313
-        ],
-        [
-          45.17927,
-          5.74306
-        ],
-        [
-          45.17893,
-          5.74285
-        ],
-        [
-          45.17871,
-          5.74252
-        ],
-        [
-          45.17862,
-          5.74219
-        ],
-        [
-          45.17781,
-          5.74155
-        ],
-        [
-          45.17668,
-          5.74157
-        ],
-        [
-          45.17637,
-          5.74151
-        ],
-        [
-          45.17516,
-          5.74064
-        ],
-        [
-          45.17357,
-          5.74108
-        ],
-        [
-          45.1732,
-          5.74103
-        ],
-        [
-          45.17287,
-          5.74084
-        ],
-        [
-          45.17254,
-          5.74031
-        ],
-        [
-          45.17225,
-          5.7383
-        ],
-        [
-          45.17238,
-          5.73793
-        ],
-        [
-          45.17258,
-          5.73771
-        ],
-        [
-          45.17337,
-          5.73736
-        ],
-        [
-          45.17332,
-          5.73699
-        ],
-        [
-          45.17301,
-          5.73692
-        ],
-        [
-          45.17251,
-          5.73665
-        ],
-        [
-          45.17217,
-          5.73616
-        ],
-        [
-          45.17202,
-          5.73489
-        ],
-        [
-          45.17219,
-          5.73297
-        ],
-        [
-          45.17176,
-          5.73288
-        ],
-        [
-          45.16916,
-          5.73298
-        ],
-        [
-          45.16888,
-          5.73288
-        ],
-        [
-          45.16836,
-          5.73251
-        ],
-        [
-          45.16804,
-          5.73201
-        ],
-        [
-          45.16807,
-          5.73142
-        ],
-        [
-          45.16914,
-          5.72851
-        ],
-        [
-          45.16894,
-          5.72734
-        ],
-        [
-          45.16507,
-          5.72299
-        ],
-        [
-          45.16403,
-          5.72224
-        ],
-        [
-          45.16068,
-          5.72156
-        ],
-        [
-          45.15934,
-          5.72099
-        ],
-        [
-          45.15844,
-          5.7204
-        ],
-        [
-          45.15824,
-          5.72018
-        ],
-        [
-          45.15807,
-          5.71961
-        ],
-        [
-          45.1582,
-          5.7185
-        ],
-        [
-          45.15831,
-          5.71822
-        ],
-        [
-          45.15864,
-          5.71787
-        ],
-        [
-          45.16003,
-          5.71714
-        ],
-        [
-          45.16057,
-          5.71587
-        ],
-        [
-          45.16057,
-          5.71546
-        ],
-        [
-          45.15851,
-          5.71461
-        ],
-        [
-          45.1582,
-          5.71436
-        ],
-        [
-          45.15804,
-          5.71412
-        ],
-        [
-          45.15789,
-          5.71351
-        ],
-        [
-          45.15792,
-          5.71314
-        ],
-        [
-          45.15873,
-          5.71171
-        ],
-        [
-          45.15901,
-          5.71145
-        ],
-        [
-          45.15936,
-          5.71132
-        ],
-        [
-          45.16147,
-          5.71125
-        ],
-        [
-          45.16269,
-          5.71144
-        ],
-        [
-          45.16394,
-          5.71181
-        ],
-        [
-          45.16428,
-          5.71199
-        ],
-        [
-          45.16454,
-          5.71231
-        ]
-      ]
-    ]
+    "precedente": {
+      "version": 1,
+      "date": "01/10/2026 23:00",
+      "fichiers": {
+        "graphe_routage.bin": {
+          "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/graphe_routage.bin",
+          "taille": 50392996,
+          "sha256": "2784b62278dbbd85e5b6aae923df3b13ed62bac0da0aff2402fc02b11847af1a"
+        },
+        "parcs_ombrages.json": {
+          "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/parcs_ombrages.json",
+          "taille": 772432,
+          "sha256": "308e07b496c787aaa620f4b09f803c90f3d9225a37a6fb34615ad65135264a00"
+        },
+        "fontaines.json": {
+          "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/fontaines.json",
+          "taille": 289193,
+          "sha256": "9c3fba6ea74f2a9505cb0124f31081548354eab7bb6a1f83de5e928d65055f09"
+        },
+        "restaurants.json": {
+          "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/restaurants.json",
+          "taille": 1939568,
+          "sha256": "e0060e204725cb6c6eaa1a1e3cfdef4b712cc1696aa526cfce17c3e3d3f87798"
+        },
+        "parking.json": {
+          "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/parking.json",
+          "taille": 2343110,
+          "sha256": "eafc83c6cf960de3f3f3c0f34247c212a6ea86c703ae5cfd95fa474bca19055f"
+        },
+        "pharmacies.json": {
+          "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/pharmacies.json",
+          "taille": 250745,
+          "sha256": "0c727bf879c3b6309cd57ff5dec0f841ad8572c81f4e1e3e1971dfddcba0c400"
+        },
+        "distributeurs.json": {
+          "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/distributeurs.json",
+          "taille": 116990,
+          "sha256": "330642edde5d1bbf1e0ee1db1750bf636247771564bc730ed7b87b8ffbc38cc6"
+        },
+        "date.txt": {
+          "url": "https://github.com/leboncash006-max/fresko-donnees/releases/download/paris-v1/date.txt",
+          "taille": 18,
+          "sha256": "12b49f9e38a12b2735353539b2effc674a8e46532a8be9854d34f6a479beb460"
+        }
+      }
+    }
   }
 ]
