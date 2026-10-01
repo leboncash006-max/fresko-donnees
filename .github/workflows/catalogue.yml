@@ -7,6 +7,9 @@ on:
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/**"]
 permissions:
   contents: write
 concurrency:

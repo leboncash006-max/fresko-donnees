@@ -8,6 +8,9 @@ Lancé par .github/workflows/catalogue.yml (à chaque release publiée et
 toutes les 6 heures). Sans dépendance : bibliothèque standard seulement.
 Une release trop récente (moins de 3 minutes) est laissée au kit, qui
 écrit lui-même le catalogue juste après avoir publié.
+
+Fait aussi le ménage : un brouillon dont le tag existe déjà en release
+publiée (envoi coupé puis refait) est supprimé, il ne sert plus à rien.
 """
 
 import hashlib
@@ -15,6 +18,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -26,11 +30,30 @@ CHAMPS_FICHE = ("description", "communes", "contour")
 DELAI = timedelta(minutes=int(os.environ.get("DELAI_MINUTES", "3")))
 
 
-def demande(url, accept="application/vnd.github+json"):
+def demande(url, accept="application/vnd.github+json", methode="GET"):
     entetes = {"Accept": accept, "User-Agent": "fresko-catalogue"}
     if os.environ.get("GITHUB_TOKEN"):
         entetes["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
-    return urllib.request.urlopen(urllib.request.Request(url, headers=entetes), timeout=120)
+    requete = urllib.request.Request(url, headers=entetes, method=methode)
+    return urllib.request.urlopen(requete, timeout=120)
+
+
+def menage(toutes):
+    """Supprime les brouillons en double d'une release publiée."""
+    publiees = {r["tag_name"] for r in toutes if not r["draft"]}
+    for r in toutes:
+        if r["draft"] and r["tag_name"] in publiees:
+            if not os.environ.get("GITHUB_TOKEN"):
+                print(f"Brouillon en double {r['tag_name']} : à supprimer (pas de jeton ici).")
+                continue
+            try:
+                demande(f"https://api.github.com/repos/{DEPOT}/releases/{r['id']}",
+                        methode="DELETE").close()
+            except urllib.error.HTTPError as e:  # le catalogue passe avant le ménage
+                print(f"Brouillon en double {r['tag_name']} : suppression refusée ({e.code}).")
+                continue
+            print(f"Brouillon en double {r['tag_name']} supprimé "
+                  f"({sum(a['size'] for a in r['assets']) / 1e6:.0f} Mo).")
 
 
 def releases():
@@ -66,7 +89,9 @@ def main():
     catalogue = json.loads(CATALOGUE.read_text(encoding="utf-8")) if CATALOGUE.exists() else []
     maintenant = datetime.now(timezone.utc)
     dernieres = {}
-    for r in releases():
+    toutes = releases()
+    menage(toutes)
+    for r in toutes:
         m = re.fullmatch(r"(.+)-v(\d+)", r["tag_name"])
         if r["draft"] or r["prerelease"] or not m:
             continue
