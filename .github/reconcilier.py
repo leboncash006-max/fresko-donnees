@@ -136,7 +136,7 @@ def empreinte(asset):
 
 
 def resume(entree):
-    return {k: entree[k] for k in ("version", "date", "fichiers") if k in entree}
+    return {k: entree[k] for k in ("version", "date", "fichiers", "volumes") if k in entree}
 
 
 def main():
@@ -181,17 +181,25 @@ def main():
             lignes = [l.strip() for l in contenu(assets["date.txt"]).decode("utf-8-sig").splitlines()]
             date = next((l for l in lignes if l), None)
         date = date or meta.get("date") or (publiee + timedelta(hours=2)).strftime("%d/%m/%Y %H:%M")
-        fichiers = {}
+        fichiers, volumes = {}, None
         for nom, asset in sorted(assets.items()):
             if nom in NON_PUBLIES:
                 continue
             sha, taille = empreinte(asset)
-            fichiers[nom] = {"url": asset["browser_download_url"], "taille": taille, "sha256": sha}
+            description = {"url": asset["browser_download_url"], "taille": taille, "sha256": sha}
+            # La vue 3D n'est pas téléchargée avec la ville : l'app la lit
+            # par tuiles, à la demande.
+            if nom == "volumes.bin":
+                volumes = description
+            else:
+                fichiers[nom] = description
         nouvelle = {
             "id": id_ville, "nom": meta["nom"], "lat": meta["lat"], "lon": meta["lon"],
             "version": version, "date": date, "fichiers": fichiers,
             **{k: meta[k] for k in CHAMPS_FICHE if meta.get(k)},
         }
+        if volumes:
+            nouvelle["volumes"] = volumes
         if entree:
             nouvelle["precedente"] = resume(entree)
         catalogue = [v for v in catalogue if v.get("id") != id_ville] + [nouvelle]
