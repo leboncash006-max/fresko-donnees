@@ -1,2 +1,1 @@
 # Villes à effacer de GitHub (catalogue, releases, tags) : un identifiant par ligne.
-paris
