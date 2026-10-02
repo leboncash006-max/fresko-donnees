@@ -11,6 +11,10 @@ Une release trop récente (moins de 3 minutes) est laissée au kit, qui
 
 Fait aussi le ménage : un brouillon dont le tag existe déjà en release
 publiée (envoi coupé puis refait) est supprimé, il ne sert plus à rien.
+
+Villes à effacer : un identifiant par ligne dans .github/supprimer.txt.
+La ville sort du catalogue, toutes ses releases (<id>-v*) et leurs tags
+sont supprimés ; une fois tout effacé, l'identifiant quitte la liste.
 """
 
 import hashlib
@@ -25,6 +29,7 @@ from pathlib import Path
 
 DEPOT = os.environ.get("DEPOT", "leboncash006-max/fresko-donnees")
 CATALOGUE = Path(__file__).resolve().parent.parent / "villes.json"
+A_SUPPRIMER = Path(__file__).resolve().parent / "supprimer.txt"
 NON_PUBLIES = {"ville.json", "villes.json"}
 CHAMPS_FICHE = ("description", "communes", "contour")
 DELAI = timedelta(minutes=int(os.environ.get("DELAI_MINUTES", "3")))
@@ -36,6 +41,55 @@ def demande(url, accept="application/vnd.github+json", methode="GET"):
         entetes["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
     requete = urllib.request.Request(url, headers=entetes, method=methode)
     return urllib.request.urlopen(requete, timeout=120)
+
+
+def effacer(toutes, catalogue):
+    """Villes de supprimer.txt : hors du catalogue, releases et tags
+    supprimés. Renvoie (catalogue, identifiants encore à effacer)."""
+    if not A_SUPPRIMER.exists():
+        return catalogue, set()
+    ids = {l.strip() for l in A_SUPPRIMER.read_text(encoding="utf-8").splitlines()
+           if l.strip() and not l.startswith("#")}
+    restants = set()
+    for id_ville in sorted(ids):
+        catalogue = [v for v in catalogue if v.get("id") != id_ville]
+        for r in toutes:
+            if not re.fullmatch(re.escape(id_ville) + r"-v\d+", r["tag_name"]):
+                continue
+            try:
+                demande(f"https://api.github.com/repos/{DEPOT}/releases/{r['id']}",
+                        methode="DELETE").close()
+                print(f"{r['tag_name']} : release supprimée.")
+            except urllib.error.HTTPError as e:
+                print(f"{r['tag_name']} : suppression de la release refusée ({e.code}).")
+                restants.add(id_ville)
+                continue
+            try:
+                demande(f"https://api.github.com/repos/{DEPOT}/git/refs/tags/{r['tag_name']}",
+                        methode="DELETE").close()
+            except urllib.error.HTTPError as e:
+                if e.code != 422:  # 422 : tag déjà absent
+                    print(f"{r['tag_name']} : suppression du tag refusée ({e.code}).")
+                    restants.add(id_ville)
+        # Tags restés seuls (release supprimée à la main sur GitHub).
+        with demande(f"https://api.github.com/repos/{DEPOT}/tags?per_page=100") as rep:
+            tags = [t["name"] for t in json.load(rep)]
+        for tag in tags:
+            if not re.fullmatch(re.escape(id_ville) + r"-v\d+", tag):
+                continue
+            if any(r["tag_name"] == tag for r in toutes):
+                continue  # déjà traité avec sa release
+            try:
+                demande(f"https://api.github.com/repos/{DEPOT}/git/refs/tags/{tag}",
+                        methode="DELETE").close()
+                print(f"{tag} : tag supprimé.")
+            except urllib.error.HTTPError as e:
+                print(f"{tag} : suppression du tag refusée ({e.code}).")
+                restants.add(id_ville)
+        print(f"{id_ville} : {'pas encore tout effacé' if id_ville in restants else 'effacée'}.")
+    entete = [l for l in A_SUPPRIMER.read_text(encoding="utf-8").splitlines() if l.startswith("#")]
+    A_SUPPRIMER.write_text("\n".join(entete + sorted(restants)) + "\n", encoding="utf-8")
+    return catalogue, ids
 
 
 def menage(toutes):
@@ -91,6 +145,9 @@ def main():
     dernieres = {}
     toutes = releases()
     menage(toutes)
+    avant = len(catalogue)
+    catalogue, effacees = effacer(toutes, catalogue)
+    change = len(catalogue) != avant
     for r in toutes:
         m = re.fullmatch(r"(.+)-v(\d+)", r["tag_name"])
         if r["draft"] or r["prerelease"] or not m:
@@ -99,10 +156,11 @@ def main():
         if "graphe_routage.bin" not in noms:
             continue
         id_ville, version = m.group(1), int(m.group(2))
+        if id_ville in effacees:
+            continue
         if version > dernieres.get(id_ville, (0, None))[0]:
             dernieres[id_ville] = (version, r)
 
-    change = False
     for id_ville, (version, r) in sorted(dernieres.items()):
         entree = next((v for v in catalogue if v.get("id") == id_ville), None)
         if entree and entree.get("version", 0) >= version:
